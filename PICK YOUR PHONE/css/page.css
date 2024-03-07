@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    background-color: rgb(149, 183, 202);
+    overflow-x: hidden;
+}
+
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    /* Untuk membuat navigasi di tengah */
+    font-weight: 600;
+}
+
+nav .logo{
+    transform: translateX(80px);
+    padding: 15px;
+}
+
+nav .logo:hover {
+    cursor: pointer;
+}
+
+nav ul {
+    transform: translateX(300px);
+    list-style-type: none;
+    /* Menghilangkan bullets */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    padding: 20px 0px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    /* Warna teks */
+    padding: 15px 30px;
+    /* Jarak di sekitar teks navigasi */
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 9;
+}
+
+.contentBox {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.contentBox .imgBox {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentBox .imgBox::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgb(105, 123, 134);
+    border-radius: 50%;
+}
+
+.contentBox .imgBox img {
+    position: relative;
+    max-width: 150px;
+}
+
+.contentBox .content {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentBox .content h2 {
+    color: #333;
+    line-height: 1em;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.contentBox .content span {
+    font-size: 2em;
+    font-weight: 500;
+    color: rgb(50, 117, 192);
+}
+
+.contentBox .content p {
+    font-weight: 300;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #f3f3f3 url(cross.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    z-index: 20;
+}
+
+.imageBest {
+    transform: translate(1000px, 80px);
+    filter: drop-shadow(5px 5px 10px);
+}
+
+.pro {
+    transform: translate(300px, -300px);
+    font-size: 30px;
+}
+
+.text {
+    transform: translate(300px, -300px);
+    position: relative;
+    width: 400px;
+    height: 300px;
+}
+
+.button {
+    transform: translate(0px,10px);
+    height: 50px;
+    width: 200px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #252525;
+    overflow: hidden;
+    border-radius: 30px;
+    color: #333;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-txt {
+    z-index: 1;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: #333;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+}
+
+.button:hover {
+    box-shadow: 1px 1px 200px #252525;
+    color: #fff;
+    border: none;
+}
+
+.type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+}
